@@ -86,9 +86,9 @@ function getKeyboard(user) {
 
 async function startOrder(msg) {
   const user = db.getUser(msg.chat.id);
-  const webpage = await fetch
-    .get('https://startupbasic.ir/food/')
-    .then(res => res.text());
+  const webpage = await fetch('https://startupbasic.ir/food/').then(res =>
+    res.text()
+  );
   const $ = cheerio.load(webpage);
   const cherOptions = $('div.entry-content p');
 
@@ -140,9 +140,9 @@ async function pay(msg) {
   const chatID = msg.chat.id;
   const user = db.getUser(chatID);
 
-  const webpage = await fetch
-    .get('https://startupbasic.ir/food/')
-    .then(res => res.text());
+  const webpage = await fetch('https://startupbasic.ir/food/').then(res =>
+    res.text()
+  );
   const $ = cheerio.load(webpage);
 
   const form = $('form[action^="/food/"]');
