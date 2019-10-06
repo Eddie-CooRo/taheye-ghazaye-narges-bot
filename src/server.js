@@ -1,9 +1,17 @@
 const axios = require('axios');
-const uuid = require('uuidv4').default;
 const qs = require('qs');
 const TelegramBot = require('node-telegram-bot-api');
 const cheerio = require('cheerio');
 const fetch = require('isomorphic-fetch');
+const express = require('express');
+
+const app = express();
+app.get('/', (req, res) => {
+  res.send('Server is up');
+});
+app.listen(process.env.PORT || 3000, () => {
+  console.log('Express server is up and running');
+});
 
 const token = '923328831:AAFWEByFEXCGyMbSS-7xoZvE_v1i0rUqpDo';
 
