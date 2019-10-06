@@ -12,7 +12,7 @@ app.listen(process.env.PORT || 3000, () => {
   console.log('Express server is up and running');
 });
 
-const token = '923328831:AAFWEByFEXCGyMbSS-7xoZvE_v1i0rUqpDo';
+const token = process.env.BOT_TOKEN;
 
 console.log('Starting bot');
 const bot = new TelegramBot(token, { polling: true });
