@@ -7,6 +7,7 @@ const fetch = require('isomorphic-fetch');
 
 const token = '923328831:AAFWEByFEXCGyMbSS-7xoZvE_v1i0rUqpDo';
 
+console.log('Starting bot');
 const bot = new TelegramBot(token, { polling: true });
 
 const REQUESTING = Symbol('requesting');
