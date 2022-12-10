@@ -13,7 +13,7 @@
     "express": "^4.17.1",
     "isomorphic-fetch": "^2.2.1",
     "node-telegram-bot-api": "^0.30.0",
-    "qs": "^6.9.0"
+    "qs": "^6.9.7"
   },
   "devDependencies": {
     "nodemon": "^1.19.3"
